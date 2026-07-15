@@ -1,0 +1,61 @@
+package com.wipro.main;
+
+import java.util.*;
+
+import com.wipro.bean.Employee;
+import com.wipro.util.EmployeeSorter;
+
+public class EmployeeMain {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the Number of Employees");
+        int n = sc.nextInt();
+        sc.nextLine();
+
+        ArrayList<Employee> list = new ArrayList<Employee>();
+
+        for (int i = 1; i <= n; i++) {
+
+            System.out.println("Enter Employee " + i + " Details");
+
+            System.out.println("Enter the Firstname");
+            String first = sc.nextLine();
+
+            System.out.println("Enter the Lastname");
+            String last = sc.nextLine();
+
+            System.out.println("Enter the Mobile");
+            long mobile = sc.nextLong();
+            sc.nextLine();
+
+            System.out.println("Enter the Email");
+            String email = sc.nextLine();
+
+            System.out.println("Enter the Address");
+            String address = sc.nextLine();
+
+            list.add(new Employee(first, last, mobile, email, address));
+        }
+
+        Collections.sort(list, new EmployeeSorter());
+
+        System.out.println();
+        System.out.println("Employee List");
+        System.out.printf("%-15s %-15s %-15s %-30s %-15s%n",
+                "FirstName", "SecondName", "MobileNumber", "Email", "Address");
+
+        for (Employee e : list) {
+            System.out.printf("%-15s %-15s %-15d %-30s %-15s%n",
+                    e.getFirstName(),
+                    e.getLastName(),
+                    e.getMobileNumber(),
+                    e.getEmail(),
+                    e.getAddress());
+        }
+
+        sc.close();
+    }
+}
