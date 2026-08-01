@@ -143,3 +143,40 @@ SELECT *
 FROM dept;
 INSERT INTO dept (department_id, department_name)
 VALUES (10, 'Accounts');
+
+//statement 1
+CREATE TABLE student (
+    rollno NUMBER(4) PRIMARY KEY,
+    studentname VARCHAR2(20) NOT NULL,
+    standard VARCHAR2(2) NOT NULL,
+    date_of_birth DATE,
+    fees NUMBER(9,2)
+);
+DESC student;
+SELECT * FROM student;
+ALTER TABLE student
+MODIFY standard VARCHAR2(4);
+
+SELECT rollno, studentname FROM student;
+DELETE FROM student;
+COMMIT;
+SELECT * FROM student;
+DELETE FROM student;
+COMMIT;
+SELECT * FROM student;
+SELECT * FROM student;
+
+//statement 2 (student log)
+CREATE TABLE StudentLog
+(
+    RollNo NUMBER(4),
+    StudentName VARCHAR2(20),
+    Standard VARCHAR2(4),
+    Leaving_Date DATE
+);
+DESC StudentLog;
+SELECT * FROM Student;
+SELECT * FROM StudentLog;
+
+//staement 3
+SELECT * FROM Student;
