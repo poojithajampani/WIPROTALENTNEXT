@@ -46,4 +46,4 @@ This repository showcases my learning and hands-on practice completed as part of
 ### 🌱 Continuous Learning
 This repository reflects my continuous learning journey. I will keep updating it with new concepts, practice programs, and projects as I expand my knowledge in Java and software development.
 
-⭐ *Thank you for visiting my repository! Feel free to explore the code and share your feedback.*
+⭐ *Thank you for visiting my repository!
